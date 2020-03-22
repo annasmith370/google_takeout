@@ -1,33 +1,40 @@
-# adhoc-venv
-Poetry virtual environment with very basic data science python packages for running adhoc & exploratory things in jupyter notebooks
+# Google Takeout :bento:
+Control & visualize google takeout data
 
 ## Setup
 
-Install [poetry](https://python-poetry.org/docs/)
+Requirements:
+* [poetry](https://python-poetry.org/docs/)
+* Python 3.7
+
+[Follow Google's instructions](https://support.google.com/accounts/answer/3024190?hl=en) for requesting and downloading account data for all accounts and products of interest (This could take several days). Select 2GB `.zip` files, and copy all of them to the [data/raw](data/raw) directory.
 
 
 ## Running
 
-To create venv:
+To create the virtual environment:
 
 ```bash
 $ make venv
 ```
 
-Opening up jupyter notebooks in the python virtual environment:
-
+To stage & prepare data after it has been copied to `data/raw`:
 ```bash
-$ make run
+$ make data
 ```
 
+Specific analysis and visualization options available by product  
 
-Adding new packages is super easy. Activate the environment and use the `add` command. For example:
+## Accessing your data
+After the data is staged, it will be available in a <Postgres/SQLite> database accessible via 
+
 ```bash
-$ source ./.venv/bin/activate
-(venv) $ poetry add pandas
-(venv) $ deactivate
-$ 
+$ make shell_sql
 ```
 
+Following is a quick summary of the database contents. A full entity relationship diagram is available [here](TODO)
+* TableA
+* TableB
 
-
+## By Product
+TODO
