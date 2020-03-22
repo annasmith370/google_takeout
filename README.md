@@ -5,9 +5,9 @@ Control & visualize google takeout data
 
 Requirements:
 * [poetry](https://python-poetry.org/docs/)
-* Python 3.7
+* Python 3.6.5+
 
-[Follow Google's instructions](https://support.google.com/accounts/answer/3024190?hl=en) for requesting and downloading account data for all accounts and products of interest (This could take several days). Select 2GB `.zip` files, and copy all of them to the [data/raw](data/raw) directory.
+[Follow Google's instructions](https://support.google.com/accounts/answer/3024190?hl=en) for requesting and downloading account data for all accounts and products of interest (This could take several days). Select 2GB `.zip` files, and copy all of them to the [data/raw](google-takeout/data/raw) directory.
 
 
 ## Running

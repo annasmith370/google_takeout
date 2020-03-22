@@ -1,16 +1,15 @@
 [tool.poetry]
-name = "adhoc-venv"
+name = "google-takeout"
 version = "0.0.1"
-description = "For Ad-hoc notebook running"
+description = "Control & visualize google takeout data :bento:"
 authors = ["Anna annalsmith14@gmail.com"]
 
 [tool.poetry.dependencies]
-python = "^3.7.2"
-jupyter = "^1.0"
-pandas = "^1.0"
-numpy = "^1.18"
-scikit-learn = "^0.22.2"
-matplotlib = "^3.2"
+python = "^3.6.5"
+pandas = "^1.0.3"
+matplotlib = "^3.2.1"
+bs4 = "^0.0.1"
+
 
 [build-system]
 requires = ["poetry>=1.0"]

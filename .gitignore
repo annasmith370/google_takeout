@@ -1,6 +1,5 @@
-# Don't actually commit anything in adhoc
-adhoc/*.ipynb
-adhoc/*.py
+# Nothing should be commited in the data folder!!!
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
