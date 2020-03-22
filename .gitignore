@@ -1,5 +1,5 @@
 # Nothing should be commited in the data folder!!!
-
+google-takeout/data/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
