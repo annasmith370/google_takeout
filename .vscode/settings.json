@@ -1,0 +1,6 @@
+{
+    "black.lineLength": 99,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+}

@@ -13,3 +13,7 @@ venv: clean
 
 data:
 	echo TODO
+
+
+test:
+	poetry run pytest tests

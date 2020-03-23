@@ -1,14 +1,19 @@
 [tool.poetry]
-name = "google-takeout"
+name = "google_takeout"
 version = "0.0.1"
 description = "Control & visualize google takeout data :bento:"
-authors = ["Anna annalsmith14@gmail.com"]
+authors = ["Anna"]
 
 [tool.poetry.dependencies]
 python = "^3.6.5"
-pandas = "^1.0.3"
-matplotlib = "^3.2.1"
 bs4 = "^0.0.1"
+click = "^7.1.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7.9"
+pylint = "^2.4.4"
+black = "^19.10b0"
+pytest = "^5.4.1"
 
 
 [build-system]
