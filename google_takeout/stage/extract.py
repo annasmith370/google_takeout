@@ -18,23 +18,15 @@ def get_all_files(directory: str, ext: str) -> typing.List[Path]:
 
 
 def extract_file(filename: Path, destination: Path):
+    LOG.info("unzipping {f}".format(f=str(filename)))
     with zipfile.ZipFile(filename, "r") as zipped:
         zipped.extractall(destination)
 
 
 def extract_data_from_zipfiles():
     all_files = get_all_files(DATA_ZIPPED, ".zip")
-    LOG.info(
-        "found {n_files} file(s) in {zipped} to unzip".format(
-            n_files=len(all_files), zipped=DATA_ZIPPED
-        )
-    )
+    LOG.info("found %s file(s) in %s to unzip", len(all_files), DATA_ZIPPED)
     output_folder = Path(DATA_UNZIPPED)
     for f in all_files:
-        LOG.info("unzipping {f}".format(f=str(f)))
         extract_file(f, output_folder)
-    LOG.info(
-        "Successfully unzipped {n_files} files into {output}".format(
-            n_files=len(all_files), output=output_folder
-        )
-    )
+    LOG.info("Successfully unzipped %s files into %s", len(all_files), output_folder)

@@ -16,4 +16,4 @@ data:
 
 
 test:
-	poetry run pytest tests
+	poetry run pytest google_takeout/tests
