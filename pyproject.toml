@@ -21,3 +21,4 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
 stage = "google_takeout.stage.cli:stage"
+product = "google_takeout.stage.cli:product"

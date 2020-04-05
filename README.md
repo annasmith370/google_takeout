@@ -33,8 +33,13 @@ $ make shell_sql
 ```
 
 Following is a quick summary of the database contents. A full entity relationship diagram is available [here](TODO)
-* TableA
-* TableB
 
 ## By Product
-TODO
+
+### Google Fit
+
+Raw daily activities:
+* `fit_activities_activity`: rawfile, activity_num, Sport, Id, Notes
+* `fit_activities_lap`: rawfile, activity_num, lap_num, DistanceMeters, TotalTimeSeconds, Calories, Intensity, TriggerMethod
+* `fit_activities_trackpoint`: rawfile, activity_num, lap_num, trackpoint_num, Distance, Time, AltitudeMeters
+* `fit_activities_position`: rawfile, activity_num, lap_num, trackpoint_num,  Latitude, Longitude,

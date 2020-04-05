@@ -11,10 +11,10 @@ DATA_UNZIPPED = "google_takeout/data"  # unzipped results will combine into "goo
 LOG = logging.getLogger(__name__)
 
 
-def get_all_files(directory: str, ext: str) -> typing.List[Path]:
+def get_all_files(directory: str, ext: typing.Optional[str] = "") -> typing.List[Path]:
     directory = Path(directory)
     ext = ext.lower()
-    return [f for f in directory.iterdir() if f and ext in f.suffixes]
+    return [f for f in directory.iterdir() if f and (ext in f.suffixes or not ext)]
 
 
 def extract_file(filename: Path, destination: Path):
